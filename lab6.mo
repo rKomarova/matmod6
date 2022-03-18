@@ -13,9 +13,13 @@ Real R(start=R0);
 equation
 
 // случай когда I(0) <= I*
+//der(S) = 0;
+//der(I) = -b*I;
+//der(R) = b*I;
 
-der(S) = 0;
-der(I) = -b*I;
+// случай когда I(0) > I*
+der(S) = -a*S;
+der(I) = a*S - b*I;
 der(R) = b*I;
 
 end lab8;
